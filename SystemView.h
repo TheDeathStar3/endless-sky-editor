@@ -54,6 +54,8 @@ public slots:
     void RandomizeUninhabited();
     void ChangeAsteroids();
     void ChangeMinables();
+    void DeleteAsteroids();
+    void DeleteMinables();
     void ChangeStar();
     void ChangePlanet();
     void ChangeMoon();
