@@ -359,8 +359,8 @@ void System::Init(const QString &name, const QVector2D &position)
     this->position = position;
 
     Randomize(true, false);
-    ChangeAsteroids();
-    ChangeMinables();
+    //ChangeAsteroids();
+    //ChangeMinables();
 }
 
 
@@ -577,7 +577,15 @@ void System::ChangeMinables()
     }
 }
 
+void System::DeleteAsteroids()
+{
+    asteroids.clear();
+}
 
+void System::DeleteMinables()
+{
+    minables.clear();
+}
 
 void System::ChangeStar()
 {

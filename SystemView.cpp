@@ -164,8 +164,28 @@ void SystemView::ChangeMinables()
     }
 }
 
+void SystemView::DeleteAsteroids()
+{
+    if(system)
+    {
+        system->DeleteAsteroids();
+        asteroids.Set(system);
+        DidChange();
+    }
+}
 
 
+
+void SystemView::DeleteMinables()
+{
+    if(system)
+    {
+        system->DeleteMinables();
+        asteroids.Set(system);
+        detailView->UpdateMinables();
+        DidChange();
+    }
+}
 void SystemView::ChangeStar()
 {
     if(system)

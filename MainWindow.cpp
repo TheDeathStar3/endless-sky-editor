@@ -315,6 +315,14 @@ void MainWindow::CreateMenus()
         connect(changeMinables, SIGNAL(triggered()), systemView, SLOT(ChangeMinables()));
         changeMinables->setShortcut(QKeySequence("H"));
 
+        QAction *deleteAsteroids = systemMenu->addAction("Delete Asteroids");
+        connect(deleteAsteroids, SIGNAL(triggered()), systemView, SLOT(DeleteAsteroids()));
+        deleteAsteroids->setShortcut(QKeySequence("F"));
+
+        QAction *deleteMinables = systemMenu->addAction("Delete Minables");
+        connect(deleteMinables, SIGNAL(triggered()), systemView, SLOT(DeleteMinables()));
+        deleteMinables->setShortcut(QKeySequence("G"));
+
         systemMenu->addSeparator();
 
         QAction *changeStar = systemMenu->addAction("Change Star");

@@ -104,6 +104,8 @@ public:
     void Move(StellarObject *object, double dDistance, double dAngle = 0.);
     void ChangeAsteroids();
     void ChangeMinables();
+    void DeleteAsteroids();
+    void DeleteMinables();
     void ChangeStar();
     void ChangeSprite(StellarObject *object);
     void AddPlanet();
