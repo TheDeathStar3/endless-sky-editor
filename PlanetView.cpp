@@ -52,11 +52,11 @@ PlanetView::PlanetView(Map &mapData, QWidget *parent) :
     landscape->setMaximumHeight(360);
 
     description = new QPlainTextEdit(this);
-    description->setTabStopWidth(20);
+  //  description->setTabStopWidth(20);
     connect(description, SIGNAL(textChanged()), this, SLOT(DescriptionChanged()));
 
     spaceport = new QPlainTextEdit(this);
-    spaceport->setTabStopWidth(20);
+  //  spaceport->setTabStopWidth(20);
     connect(spaceport, SIGNAL(textChanged()), this, SLOT(SpaceportDescriptionChanged()));
 
     shipyard = new QLineEdit(this);
