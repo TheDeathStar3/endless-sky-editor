@@ -24,13 +24,14 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #include <QString>
 #include <QTreeWidget>
 #include <QVBoxLayout>
+#include <QScrollArea>
 
 using namespace std;
 
 
 
-DetailView::DetailView(Map &mapData, GalaxyView *galaxyView, QWidget *parent) :
-    QWidget(parent), mapData(mapData), galaxyView(galaxyView)
+DetailView::DetailView(Map &mapData, GalaxyView *galaxyView, QScrollArea *parent) :
+    QScrollArea(parent), mapData(mapData), galaxyView(galaxyView)
 {
     // Create the left sidebar, showing details about the selected system.
     QVBoxLayout *layout = new QVBoxLayout(this);
