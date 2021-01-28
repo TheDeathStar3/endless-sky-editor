@@ -8,6 +8,9 @@ Foundation, either version 3 of the License, or (at your option) any later versi
 Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+2021 Jesse Rowlandson alowed for resizing the main window
+
 */
 
 #ifndef MAINWINDOW_H
@@ -26,6 +29,7 @@ class QDropEvent;
 class QMenu;
 class QString;
 class QTabWidget;
+class QScrollArea;
 
 
 
@@ -34,7 +38,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(Map &map, QWidget *parent = 0);
+    MainWindow(Map &map, QScrollArea *parent = 0);
     ~MainWindow();
 
     void DoOpen(const QString &path);
