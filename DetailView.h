@@ -14,6 +14,7 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #define DETAILVIEW_H
 
 #include <QWidget>
+#include <QScrollArea>
 
 #include <QList>
 
@@ -27,14 +28,15 @@ class QLineEdit;
 class QObject;
 class QTreeWidget;
 class QTreeWidgetItem;
+class QScrollArea;
 
 
 
-class DetailView : public QWidget
+class DetailView : public QScrollArea
 {
     Q_OBJECT
 public:
-    explicit DetailView(Map &mapData, GalaxyView *galaxyView, QWidget *parent = 0);
+    explicit DetailView(Map &mapData, GalaxyView *galaxyView, QScrollArea *parent = 0);
 
     void SetSystem(System *system);
     void UpdateMinables();
