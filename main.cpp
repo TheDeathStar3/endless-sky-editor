@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 #elif defined _WIN32
         path = "C:/Program Files/Endless Sky/data/map.txt";
 #else
-        path = "/usr/share/games/endless-sky/data/map.txt";
+        path = "../endless-sky/data/map.txt";
 #endif
         if(!path.isEmpty() && !QFileInfo(path).exists())
             path.clear();

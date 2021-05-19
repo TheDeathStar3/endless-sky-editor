@@ -35,7 +35,7 @@ using namespace std;
 
 
 
-MainWindow::MainWindow(Map &map, QWidget *parent)
+MainWindow::MainWindow(Map &map, QScrollArea *parent)
     : QMainWindow(parent), map(map)
 {
     CreateWidgets();
@@ -211,7 +211,7 @@ void MainWindow::dropEvent(QDropEvent *event)
 
 void MainWindow::CreateWidgets()
 {
-    QWidget *box = new QWidget(this);
+    QScrollArea *box = new QScrollArea(this);
     QHBoxLayout *layout = new QHBoxLayout(box);
     setCentralWidget(box);
 
